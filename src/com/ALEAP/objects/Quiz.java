@@ -33,11 +33,11 @@ public class Quiz implements Serializable{
 	public Question getQuestion(int topic, int question){
 		return getTopic(topic).getQuestion(question);
 	}
-	public boolean hasNext(){
+	public boolean hasNextTopic(){
 		return index < size;
 	}
 	public Topic nextTopic(){
-		if(hasNext()){
+		if(hasNextTopic()){
 			return topics.get(index++);
 		}
 		else if(size != 0){

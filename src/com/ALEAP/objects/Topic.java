@@ -33,11 +33,11 @@ public class Topic implements Serializable{
 			return questions.get(questions.size()-1);
 		}
 	}
-	public boolean hasNext(){
+	public boolean hasNextQuestion(){
 		return index < size;
 	}
 	public Question nextQuestion(){
-		if(hasNext()){
+		if(hasNextQuestion()){
 			return questions.get(index++);
 		}
 		else{
